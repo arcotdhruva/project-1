@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dhruva Arcot">
 
-<title>Quarto 1</title>
+<title>Palmer Penguins Explorer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,20 +37,31 @@ ul.task-list li input[type="checkbox"] {
 <link href="quarto-1_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="quarto-1_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="quarto-1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="quarto-1_files/libs/bootstrap/bootstrap-de9ea4695b5809f5b49b6072e50bb385.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="quarto-1_files/libs/bootstrap/bootstrap-3c8b75f00068d02dead620150a0298f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#flipper-length-vs.-body-mass" id="toc-flipper-length-vs.-body-mass" class="nav-link" data-scroll-target="#flipper-length-vs.-body-mass">Flipper Length vs.&nbsp;Body Mass</a></li>
+  <li><a href="#bill-dimensions-by-species" id="toc-bill-dimensions-by-species" class="nav-link" data-scroll-target="#bill-dimensions-by-species">Bill Dimensions by Species</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto 1</h1>
+<h1 class="title">Palmer Penguins Explorer</h1>
 </div>
 
 
@@ -73,7 +84,324 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The <code>palmerpenguins</code> dataset contains measurements for <strong>333</strong> penguins** across three species — <em>Adelie</em>, <em>Chinstrap</em>, and <em>Gentoo</em> — collected from three islands in the Palmer Archipelago, Antarctica.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Summary statistics by species and island</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">species</th>
+<th style="text-align: left;">island</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Avg Flipper (mm)</th>
+<th style="text-align: right;">Avg Mass (g)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">188.8</td>
+<td style="text-align: right;">3710</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Dream</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">189.9</td>
+<td style="text-align: right;">3701</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">191.5</td>
+<td style="text-align: right;">3709</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chinstrap</td>
+<td style="text-align: left;">Dream</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">195.8</td>
+<td style="text-align: right;">3733</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gentoo</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">217.2</td>
+<td style="text-align: right;">5092</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="flipper-length-vs.-body-mass" class="level2">
+<h2 class="anchored" data-anchor-id="flipper-length-vs.-body-mass">Flipper Length vs.&nbsp;Body Mass</h2>
+<p>Larger flippers are a strong predictor of body mass — and the three species occupy almost entirely separate morphological spaces.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="quarto-1_files/figure-html/scatter-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bill-dimensions-by-species" class="level2">
+<h2 class="anchored" data-anchor-id="bill-dimensions-by-species">Bill Dimensions by Species</h2>
+<p>Bill shape differs sharply between species — Chinstrap penguins in particular have notably long, narrow bills relative to their size.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="quarto-1_files/figure-html/bill-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The full cleaned dataset (333 observations):</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>First 20 observations (cleaned dataset)</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Species</th>
+<th style="text-align: left;">Island</th>
+<th style="text-align: right;">Bill Length (mm)</th>
+<th style="text-align: right;">Bill Depth (mm)</th>
+<th style="text-align: right;">Flipper (mm)</th>
+<th style="text-align: right;">Mass (g)</th>
+<th style="text-align: left;">Sex</th>
+<th style="text-align: right;">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39.1</td>
+<td style="text-align: right;">18.7</td>
+<td style="text-align: right;">181</td>
+<td style="text-align: right;">3750</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39.5</td>
+<td style="text-align: right;">17.4</td>
+<td style="text-align: right;">186</td>
+<td style="text-align: right;">3800</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">40.3</td>
+<td style="text-align: right;">18.0</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">3250</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">36.7</td>
+<td style="text-align: right;">19.3</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">3450</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39.3</td>
+<td style="text-align: right;">20.6</td>
+<td style="text-align: right;">190</td>
+<td style="text-align: right;">3650</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">38.9</td>
+<td style="text-align: right;">17.8</td>
+<td style="text-align: right;">181</td>
+<td style="text-align: right;">3625</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">39.2</td>
+<td style="text-align: right;">19.6</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">4675</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">41.1</td>
+<td style="text-align: right;">17.6</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">3200</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">38.6</td>
+<td style="text-align: right;">21.2</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">3800</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">34.6</td>
+<td style="text-align: right;">21.1</td>
+<td style="text-align: right;">198</td>
+<td style="text-align: right;">4400</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">36.6</td>
+<td style="text-align: right;">17.8</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">3700</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">38.7</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">3450</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">42.5</td>
+<td style="text-align: right;">20.7</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">4500</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">34.4</td>
+<td style="text-align: right;">18.4</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">3325</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Torgersen</td>
+<td style="text-align: right;">46.0</td>
+<td style="text-align: right;">21.5</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">4200</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">37.8</td>
+<td style="text-align: right;">18.3</td>
+<td style="text-align: right;">174</td>
+<td style="text-align: right;">3400</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">37.7</td>
+<td style="text-align: right;">18.7</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">3600</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">35.9</td>
+<td style="text-align: right;">19.2</td>
+<td style="text-align: right;">189</td>
+<td style="text-align: right;">3800</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">38.2</td>
+<td style="text-align: right;">18.1</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">3950</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Adelie</td>
+<td style="text-align: left;">Biscoe</td>
+<td style="text-align: right;">38.8</td>
+<td style="text-align: right;">17.2</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">3800</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">2007</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 
 </main>
 <!-- /main column -->
